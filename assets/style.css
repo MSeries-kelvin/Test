@@ -164,6 +164,49 @@ nav i.fa-bars {
     padding: 10px;
 }
 
+/* mobile search */
+
+
+form.mobile-search {
+    background-color: #FFFFFF;
+    border-radius: 30px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: .3s;
+    border: 3px solid var(--aColor);
+    width: fit-content;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+form.mobile-search input {
+    padding: 10px 0;
+    width: calc(100% - 60px);
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+form.mobile-search i {
+    font-size: 20px;
+    color: var(--aColor);
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+form.mobile-search input {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.mobile {
+    padding: 0 var(--sPad);
+    display: none;
+}
+
 @media screen and (max-width: 1500px) {
     .nav ul li.oppo {
         display: none;
@@ -181,17 +224,15 @@ nav i.fa-bars {
 }
 
 @media screen and (max-width: 780px) {
-    .user-info i.fa-heart {
+    .user-info form {
         display: none;
     }
-    /* adjust search bar width */
-
+    .mobile {
+        display: block;
+    }
 }
 
 @media screen and (max-width: 540px) {
-    .user-info i.fa-heart {
-        display: none;
-    }
+
     /* adjust search bar width */
 }
-
