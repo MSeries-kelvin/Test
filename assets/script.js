@@ -8,7 +8,6 @@ document.querySelector("body").addEventListener("click", function() {
         search.classList = "";
         navIphone.style.display = "inline-block";
         setTimeout(function() {
-            document.querySelector(".logo").style.display = "inline-block";
             searchForm.classList = "";
             searchIcon.classList = "fa-solid fa-magnifying-glass";
         }, 400);
@@ -24,11 +23,21 @@ search.addEventListener("click", function() {
     if (window.innerWidth <= 1115 && window.innerWidth >= 1071) {
         navIphone.style.display = "none";
     }
-    if (window.innerWidth <= 750) {
-        document.querySelector(".logo").style.display = "none";
-    }
     this.placeholder = "enter any phone name";
 });
 // END
 
-alert(window.innerWidth);
+// menu
+let menu = document.getElementById("menu");
+let mobileList = document.querySelector(".mobile-list");
+let menuVisi = false;
+menu.addEventListener("click", function() {
+    if (!menuVisi) {
+        mobileList.style.left = "0";
+        menuVisi = true;
+    } else {
+        menuVisi = false;
+        mobileList.style.left = "-100%";
+    }
+});
+// END

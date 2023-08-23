@@ -207,6 +207,53 @@ form.mobile-search input {
     display: none;
 }
 
+/* mobile list */
+
+.mobile-list {
+    width: 100%;
+    height: 90vh;
+    overflow: auto;
+    padding: 20px var(--sPad);
+    background-color: var(--bgColor);
+    position: fixed;
+    top: calc(0 + 85px);
+    left: -100%;
+    transition: .5s;
+    z-index: 100;
+}
+
+.mobile-list h4 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.mobile-list ul {
+    list-style: none;
+}
+
+.mobile-list ul li {
+    padding: 10px 15px;
+    width: 100%;
+}
+
+.mobile-list ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--atColor);
+}
+
+.mobile-list ul li:hover {
+    background-color: var(--aColor);
+} 
+
+.mobile-list ul li:hover a {
+    color: var(--abgColor);
+}
+
+
+/* media queries */
+
 @media screen and (max-width: 1500px) {
     .nav ul li.oppo {
         display: none;
