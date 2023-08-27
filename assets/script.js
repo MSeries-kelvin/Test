@@ -30,14 +30,11 @@ search.addEventListener("click", function() {
 // menu
 let menu = document.getElementById("menu");
 let mobileList = document.querySelector(".mobile-list");
-let menuVisi = false;
+let cancel = document.querySelector(".mobile-list-header .fa-xmark");
 menu.addEventListener("click", function() {
-    if (!menuVisi) {
-        mobileList.style.left = "0";
-        menuVisi = true;
-    } else {
-        menuVisi = false;
-        mobileList.style.left = "-100%";
-    }
+    mobileList.style.left = "0";
+});
+cancel.addEventListener("click", function() {
+    mobileList.style.left = "-100%";
 });
 // END
