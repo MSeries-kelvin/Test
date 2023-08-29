@@ -155,13 +155,32 @@ nav i.fa-bars {
 
 .inner-all {
     position: absolute;
-    width: fit-content;
+    width: 300px;
+    box-shadow: 0px 0px 20px var(--tColor);
+    background-color: var(--abgColor);
     border: 1px solid var(--aColor);
     display: none;
+    height: 500px;
+    overflow-y: auto;
 }
 
 .inner-all li {
     padding: 10px;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+}
+
+.inner-all li:hover {
+    background-color: var(--aColor);
+}
+
+.inner-all li a {
+    transition: 0s !important;
+}
+
+.inner-all li:hover a {
+    color: var(--abgColor) !important;
 }
 
 /* mobile search */
@@ -307,6 +326,69 @@ form.mobile-search input {
     width: 100%;
 }
 
+/* footer */
+
+.footer {
+    width: 100%;
+    height: fit-content;
+    padding: 30px var(--sPad);
+}
+
+.footer-content {
+    padding: 40px 20px;
+    background-color: var(--bgColor);
+    border-radius: 20px;
+    display: flex;
+}
+
+.footer-content ul {
+    flex-shrink: 0;
+    flex-basis: 25%;
+    list-style: none;
+}
+
+.footer-content ul h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.footer-content ul li {
+    margin: 10px 0;
+    padding-right: 30px;
+}
+
+.footer-content ul li a {
+    text-decoration: none;
+    color: var(--atColor);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.footer-content ul li a:hover {
+    color: var(--aColor);
+}
+
+.footer-content-2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: var(--bgColor);
+    border-radius: 20px;
+}
+
+.footer-content-2 .logo {
+    width: 120px;
+}
+
+.footer-content-2 p {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--atColor);
+}
+
 /* media queries */
 
 @media screen and (max-width: 1500px) {
@@ -350,9 +432,30 @@ form.mobile-search input {
         flex-shrink: 0;
         flex-grow: 0;
     }
+    .footer-content {
+        flex-wrap: wrap;
+    }
+    .footer-content ul {
+        margin-bottom: 20px;
+        flex-basis: 50%;
+    }
+    .footer-content-2 {
+        flex-direction: column;
+    }
+    .footer-content-2 .logo {
+        margin-bottom: 10px;
+    }
+    .footer-content-2 p {
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 540px) {
-
+    .footer-content ul {
+        flex-basis: 100%;
+    }
+    .footer-content ul:nth-child(4) {
+        margin-bottom: 0;
+    }
     /* adjust search bar width */
 }
