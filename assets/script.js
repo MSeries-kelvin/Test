@@ -1,10 +1,11 @@
 // FOR SEARCH BAR
 let searchClick = false;
+let searchLabel = document.getElementById("exclude-from-body");
 let searchForm = document.querySelector(".user-info form");
 let searchIcon = document.querySelector(".user-info form i");
 let navIphone = document.querySelector(".nav ul li.iphone");
 document.querySelector("body").addEventListener("click", function() {
-    if (searchClick) {searchClick = false} else {
+    if (searchClick) {searchClick = false;} else {
         search.classList = "";
         navIphone.style.display = "inline-block";
         setTimeout(function() {
@@ -16,7 +17,6 @@ document.querySelector("body").addEventListener("click", function() {
 })
 let search = document.getElementById("search");
 search.addEventListener("click", function() {
-    searchClick = true;
     search.classList = "active";
     searchForm.classList = "active";
     searchIcon.classList += " active";
@@ -25,6 +25,9 @@ search.addEventListener("click", function() {
     }
     this.placeholder = "enter any phone name";
 });
+searchLabel.addEventListener("click", () => {
+    searchClick = true;
+})
 // END
 
 // menu

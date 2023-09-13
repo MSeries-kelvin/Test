@@ -11,21 +11,23 @@
 body {
     font-size: 100%;
     background-color: var(--abgColor);
-}
-
-:root {
-    --bgColor: #E5E6E7;
-    --abgColor: #FFFFFF;
-    --aColor: #3F96D0;
-    --tColor: #000000;
-    --atColor: #333333;
-    --sPad: 5%;
-}
-
-.container {
     width: 100%;
     height: fit-content;
     height: 100vh;
+}
+
+:root {
+    --bgColor: #e9eff5;
+    --abgColor: #FFFFFF;
+    --aColor: #3F96D0;
+    --tColor: #000000;
+    --atColor: #4e4e4e;
+    --sPad: 5%;
+}
+
+section {
+    width: 100%;
+    padding: 10px var(--sPad);
 }
 
 .nav {
@@ -298,7 +300,7 @@ form.mobile-search input {
 .header {
     width: 100%;
     height: calc(100vh - 67.03px);
-    padding: 0 var(--sPad) 30px;
+    padding: 0 var(--sPad) 10px;
 }
 
 .header-content {
@@ -308,6 +310,7 @@ form.mobile-search input {
     display: flex;
     align-items: center;
     padding: 30px;
+    border-radius: 20px;
 }
 
 .header-text {
@@ -331,7 +334,7 @@ form.mobile-search input {
 .footer {
     width: 100%;
     height: fit-content;
-    padding: 30px var(--sPad);
+    padding: 10px var(--sPad);
 }
 
 .footer-content {
@@ -389,6 +392,135 @@ form.mobile-search input {
     color: var(--atColor);
 }
 
+/* shipping.cta & newsletter.cta sections */
+
+.twin-content {
+    width: 100%;
+    height: fit-content;
+    padding: 40px 20px;
+    background-color: var(--bgColor);
+    border-radius: 20px;
+    display: flex;
+}
+
+.twin-text {
+    flex-basis: 50%;
+    flex-shrink: 0;
+}
+
+.twin-text span {
+    font-size: 16px;
+    color: var(--atColor);
+    font-weight: 700;
+}
+
+.twin-text h2 {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 55px;
+}
+
+.twin-text p {
+    font-size: 16px;
+    color: var(--atColor);
+    font-weight: 700;
+    line-height: 20px;
+    margin-bottom: 10px
+}
+
+.twin-text button {
+    padding: 10px 30px;
+    margin-top: 10px;
+    outline: 0;
+    border: 1px solid var(--tColor);
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.twin-content button:hover {
+    background-color: var(--aColor);
+    color: var(--abgColor);
+    border-color: transparent;
+}
+
+.twin-img {
+    flex-basis: 50%;
+    flex-shrink: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.twin-img img {
+    width: 300px;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+/* sale item */
+
+.sales-content {
+    width: 100%;
+    padding: 10px 0;
+}
+
+.sales-head {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.sales-head h3 {
+    font-size: 20px;
+}
+
+.sales-head span {
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.sales-items {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+}
+
+.sales-item {
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex-basis: calc(20% - 8px);
+    min-width: 217.88px;
+    height: 300px;
+    background-color: var(--bgColor);
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.sales-item-img {
+    width: 100%;
+    height: 180px;
+    margin-bottom: 10px;
+}
+
+.sales-item-img img {
+    width: 100%;
+}
+
+.sales-item-title {
+    width: 100%;
+    padding: 0 5px 0 0;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    margin-bottom: 10px;
+}
+
 /* media queries */
 
 @media screen and (max-width: 1500px) {
@@ -404,6 +536,19 @@ form.mobile-search input {
     .nav .fa-bars {
         display: inline-block;
         margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .twin-content {
+        flex-wrap: wrap;
+    }    
+    .twin-text {
+        flex-basis: 100%;
+    }
+    .twin-img {
+        flex-basis: 100%;
+        margin-top: 20px;
     }
 }
 
@@ -448,6 +593,9 @@ form.mobile-search input {
     .footer-content-2 p {
         text-align: center;
     }
+    .twin-img img {
+        width: 250px;
+    }
 }
 
 @media screen and (max-width: 540px) {
@@ -457,5 +605,4 @@ form.mobile-search input {
     .footer-content ul:nth-child(4) {
         margin-bottom: 0;
     }
-    /* adjust search bar width */
 }
