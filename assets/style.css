@@ -521,11 +521,53 @@ form.mobile-search input {
     margin-bottom: 10px;
 }
 
+.sales-item-price {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 25px;
+}
+
+.sales-item-add-btn {
+    width: 40px;
+    height: 40px;
+    background-color: var(--aColor);
+    border-radius: 50%;
+    transform: translateX(175px) translateY(-35px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    opacity: 0;
+}
+
+.sales-item-add-btn:hover {
+    transform: translateX(175px) translateY(-35px) scale(1.1, 1.1);
+}
+
+.sales-item:hover .sales-item-add-btn {
+    opacity: 1;
+}
+
+.sales-item:hover {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.562);
+}
+
+/* continue from here */
+
 /* media queries */
 
 @media screen and (max-width: 1500px) {
     .nav ul li.oppo {
         display: none;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .sales-item-add-btn {
+        transform: translateX(160px) translateY(-35px);
+    }
+    .sales-item-add-btn:hover {
+        transform: translateX(160px) translateY(-35px) scale(1.1, 1.1);
     }
 }
 
@@ -549,6 +591,9 @@ form.mobile-search input {
     .twin-img {
         flex-basis: 100%;
         margin-top: 20px;
+    }
+    .sales-item-add-btn {
+        opacity: 1;
     }
 }
 
