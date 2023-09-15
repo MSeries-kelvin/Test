@@ -245,14 +245,8 @@ form.mobile-search input {
 }
 
 .mobile-list h4 {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-.mobile-list h4 i {
-    font-size: 20px;
-    margin-right: 10px;
-    color: var(--atColor);
+    font-size: 15px;
+    margin-bottom: 5px;
 }
 
 .mobile-list ul {
@@ -260,8 +254,14 @@ form.mobile-search input {
 }
 
 .mobile-list ul li {
-    padding: 10px 15px 10px 25px;
+    padding: 10px 15px 10px 15px;
     width: 100%;
+}
+
+.mobile-list ul li i {
+    font-size: 16px;
+    margin-right: 10px;
+    color: var(--atColor);
 }
 
 .mobile-list ul li a {
@@ -587,10 +587,12 @@ form.mobile-search input {
     }    
     .twin-text {
         flex-basis: 100%;
+        order: 1;
     }
     .twin-img {
         flex-basis: 100%;
         margin-top: 20px;
+        order: 0;
     }
     .sales-item-add-btn {
         opacity: 1;
